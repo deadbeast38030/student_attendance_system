@@ -40,6 +40,7 @@ Download MySQL Server and MySQL Command Line Client.
 ### 3️⃣ Install Required Libraries
 
 Open terminal inside project folder and run:
+
 pip install -r requirements.txt
 
 ---
@@ -47,13 +48,15 @@ pip install -r requirements.txt
 ### 4️⃣ Setup Database in MySQL
 
 Open **MySQL Command Line Client** and run:
-CREATE DATABASE STUDENT;
-USE STUDENT;
 
-CREATE TABLE students (
+
+**CREATE DATABASE STUDENT;
+USE STUDENT;**
+
+**CREATE TABLE students (
 rollno INT PRIMARY KEY,
 student_name VARCHAR(50)
-);
+);**
 
 CREATE TABLE attendance (
 rollno INT,
@@ -66,16 +69,19 @@ FOREIGN KEY (rollno) REFERENCES students(rollno)
 ### 5️⃣ Update MySQL Password in Code
 
 Open `student_attendence.py` and change:
+
 password="your_mysql_password"
 
 ---
 
 ### 6️⃣ Run The Project
+
 python student_attendence.py
 
 ---
 
 ## 👨‍💻 Author
 
-Manish Debnath  
+**Manish Debnath**
+
 First Year Student | Beginner Python Developer

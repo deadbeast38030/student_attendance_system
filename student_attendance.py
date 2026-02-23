@@ -5,7 +5,7 @@ import csv                                              #Create a csv file for e
 # ---------------- DATABASE FUNCTIONS ---------------- #
 
 def execute_query(query, values=None):                  #creating a function that will run insert,update,delete queries 
-    connection = sql.connect(                            #connecting our mysql with this program file
+    connection = sql.connect(                           #connecting our mysql with this program file
         host="localhost",
         database="STUDENT",
         user="root",
@@ -13,7 +13,7 @@ def execute_query(query, values=None):                  #creating a function tha
     )
     cursor = connection.cursor()                         #bringing the cursor to the terminal or on the sql page
     if values is not None:
-        cursor.execute(query, values)                        #write the command in mysql
+        cursor.execute(query, values)                    #write the command in mysql
     else:
         cursor.execute(query)
     connection.commit()                                  #pressing enter in mysql shell
@@ -21,7 +21,7 @@ def execute_query(query, values=None):                  #creating a function tha
     connection.close()
 
 
-def fetch_all(query, values=None):                      #Fetching data from the database
+def fetch_all(query, values=None):                       #Fetching data from the database
     connection = sql.connect(                                                   
         host="localhost",
         database="STUDENT",
@@ -33,7 +33,7 @@ def fetch_all(query, values=None):                      #Fetching data from the 
         cursor.execute(query, values)
     else:
         cursor.execute(query)
-    results = cursor.fetchall()                         #return the list of tuples
+    results = cursor.fetchall()                          #return the list of tuples
     cursor.close()
     connection.close()
     return results
@@ -41,7 +41,7 @@ def fetch_all(query, values=None):                      #Fetching data from the 
 
 # ---------------- MAIN MENU ---------------- #
 
-def menu():                                             #function for menu
+def menu():                                              #function for menu
     print("=" * 40)
     print("------------------------------------------------------")
     print("------------ Attendance Management System ------------")
@@ -58,7 +58,7 @@ def menu():                                             #function for menu
 
 # ---------------- MANAGE STUDENTS ---------------- #
 
-def manage_student():                                   #Student managemnet options
+def manage_student():                                     #Student managemnet options
     print("------------------------------------------------------")
     print("------------------ Manage Students ------------------")
     print("------------------------------------------------------")
@@ -250,6 +250,4 @@ def main():
             break
         else:
             print("Invalid choice!")
-
-
 main()
